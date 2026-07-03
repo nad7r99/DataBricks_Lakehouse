@@ -185,7 +185,8 @@ Specifications
 
 About Me :
 
-i'm Nader Mohamed ,A Math & CS student at Helwan University
+i'm Nader Mohamed ,A Math & CS student at Helwan University.
+
 I’m passionate about Data Engineering, ETL pipelines, and modern data solutions.
 I enjoy designing data architectures, building scalable pipelines, and transforming raw data into actionable insights.
 
