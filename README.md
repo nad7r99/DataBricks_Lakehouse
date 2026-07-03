@@ -6,7 +6,7 @@ The project demonstrates an End-To-End Modern Data Engineering workflow using Da
 The goal of this project is to ingest raw data from CRM and ERP CSV source files, transform it into clean analytical datasets, and model it into a Orders using a Star Schema for reporting and analytics.
 
 
-🏗️ Data Architecture
+# Data Architecture
 
 The data architecture for this project follows the Medallion Architecture using Bronze, Silver, and Gold layers:
 
@@ -33,7 +33,7 @@ These tables are optimized for reporting, analytics, and dashboarding.
 
 
 
-Project Overview :
+# Project Overview :
 
  This project includes:
 
@@ -70,16 +70,16 @@ This repository is a strong portfolio project for showcasing skills in:
   Business Analytics
 
 
-Tools :
- Databricks
- PySpark
- Delta Lake
- Unity Catalog
- SQL
+# Tools :
+    Databricks
+    PySpark
+    Delta Lake
+    Unity Catalog
+    SQL
 
 
 
-Project Requirements :
+# Project Requirements :
 
 
 
@@ -104,25 +104,25 @@ Specifications
 
 
 
-Source Datasets :
+# Source Datasets :
 
- CRM Source Files
+   CRM Source Files
 
     crm_50000_customers_dirty_v3.csv.csv
     clickstream_500k_events.csv
 
     
-ERP Source Files
+  ERP Source Files
 
     orders_300k_dirty.csv
     product_catalog_dirty_30pct.csv
     support_tickets_30000_dirty.csv
 
 
-Bronze Layer
+# Bronze Layer
 
-The Bronze layer stores the raw ingested data from the source files without applying major transformations.
-Bronze Tables
+  The Bronze layer stores the raw ingested data from the source files without applying major transformations.
+  Bronze Tables
 
      lakehouse.bronze.customers
      lakehouse.bronze.stream
@@ -132,10 +132,10 @@ Bronze Tables
 
 
      
-Silver Layer
+# Silver Layer
 
-The Silver layer applies cleaning and transformation logic to each dataset.
-Silver Transformations Include
+   The Silver layer applies cleaning and transformation logic to each dataset.
+   Silver Transformations Include
 
     Trimming string columns
     Cleaning and converting date columns
@@ -147,9 +147,9 @@ Silver Transformations Include
     Renaming columns to business-friendly names
     Saving cleaned data as Delta tables
 
-Silver Tables
+# Silver Tables
 
-      lakehouse.silver.customers
+     lakehouse.silver.customers
      lakehouse.silver.stream
      lakehouse.silver.orders
      lakehouse.silver.products
@@ -158,10 +158,10 @@ Silver Tables
 
 
 
-Gold Layer
+# Gold Layer
 
-The Gold layer contains business-ready analytical tables.
-Gold Tables
+   The Gold layer contains business-ready analytical tables.
+   Gold Tables
 
      lakehouse.gold.dim_customers
      lakehouse.gold.dim_stream
@@ -169,11 +169,6 @@ Gold Tables
      lakehouse.gold.dim_products
      lakehouse.gold.dim_tickets
 
-Gold Data Model
-
-    dim_customers combines customer details from CRM and ERP
-    dim_products combines product and category details
-    fact_sales stores the core sales transactions and measurable business values
 
 
 # Orchestration Flow
